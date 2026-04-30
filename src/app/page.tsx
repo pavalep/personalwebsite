@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const profile = {
   name: "Paval EP",
   role: "React Native Developer",
@@ -83,6 +81,15 @@ const skills = [
   "CSS",
 ];
 
+const mobileStack = [
+  "Navigation",
+  "Maps",
+  "OAuth",
+  "Payments",
+  "Sentry",
+  "Release builds",
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f4f1ea] text-[#141414]">
@@ -145,15 +152,44 @@ export default function Home() {
           </div>
 
           <aside className="flex items-end">
-            <div className="w-full rounded-lg border border-black/15 bg-white/65 p-3 shadow-[0_24px_80px_rgba(20,20,20,0.16)] backdrop-blur">
-              <Image
-                src="/resume-preview.png"
-                alt="Preview of Paval EP resume"
-                width={900}
-                height={1273}
-                priority
-                className="h-auto w-full rounded-md border border-black/10"
-              />
+            <div className="relative w-full overflow-hidden rounded-lg border border-black/15 bg-[#141414] p-5 shadow-[0_24px_80px_rgba(20,20,20,0.16)]">
+              <div className="absolute inset-x-0 top-0 h-24 bg-[#f0b35b]" />
+              <div className="relative mx-auto max-w-[310px] rounded-[2rem] border border-white/20 bg-[#101614] p-3 shadow-2xl">
+                <div className="rounded-[1.5rem] bg-[#f8f7f2] p-4 text-[#141414]">
+                  <div className="mb-5 flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-black uppercase tracking-[0.16em] text-[#8d2f21]">
+                        Mobile build
+                      </p>
+                      <p className="mt-1 text-lg font-black">Production flow</p>
+                    </div>
+                    <div className="h-10 w-10 rounded-full bg-[#31524a]" />
+                  </div>
+
+                  <div className="space-y-3">
+                    {mobileStack.map((item, index) => (
+                      <div
+                        key={item}
+                        className="grid grid-cols-[36px_1fr] items-center gap-3 rounded-md border border-black/10 bg-white p-3"
+                      >
+                        <span className="flex h-9 w-9 items-center justify-center rounded-md bg-[#cfe4dc] text-sm font-black text-[#31524a]">
+                          {index + 1}
+                        </span>
+                        <span className="text-sm font-black">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-5 rounded-md bg-[#31524a] p-4 text-white">
+                    <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#f0b35b]">
+                      Focus
+                    </p>
+                    <p className="mt-2 text-2xl font-black leading-none">
+                      React Native apps shipped with care.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </aside>
         </div>
