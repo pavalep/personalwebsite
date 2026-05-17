@@ -298,10 +298,6 @@ const HomePage = () => {
                                     <span className="material-symbols-outlined">link</span>
                                     LinkedIn
                                 </a>
-                                <div className="flex items-center gap-sm px-xxl py-md font-title-md text-title-md text-primary font-bold">
-                                    <span className="material-symbols-outlined">phone</span>
-                                    +91 ...-....-..
-                                </div>
                             </div>
                         </div>
                         {/* Background pattern details */}
