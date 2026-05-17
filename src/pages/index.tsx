@@ -128,7 +128,7 @@ const HomePage = () => {
                         <h1 className="font-display-lg text-display-lg tracking-tight leading-tight">
                             Building mobile products that survive real-world complexity
                         </h1>
-                        <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
                             Specialized in high-performance cross-platform applications, integrated AI workflows, and resilient backend systems. Turning complex architectural requirements into seamless user experiences.
                         </p>
                         <div className="flex flex-wrap gap-md pt-md">
