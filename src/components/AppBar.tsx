@@ -73,7 +73,7 @@ const AppBar = () => {
                     {/* Actions & Hamburger */}
                     <div className="flex items-center gap-md">
                         <a
-                            href="mailto:pavalep@example.com"
+                            href="mailto:pavalep@pavalep.com"
                             className="hidden sm:inline-block bg-primary text-on-primary px-lg py-sm rounded-full font-label-lg text-label-lg hover:shadow-md hover:brightness-110 active:scale-95 transition-all text-center"
                         >
                             Email Me
@@ -116,7 +116,7 @@ const AppBar = () => {
                         </a>
                     ))}
                     <a
-                        href="mailto:pavalep@example.com"
+                        href="mailto:pavalep@pavalep.com"
                         className="mt-huge bg-primary text-on-primary px-xl py-md rounded-xxl font-title-md text-title-md text-center hover:brightness-110 active:scale-98 transition-all flex items-center justify-center gap-sm"
                     >
                         <span className="material-symbols-outlined">mail</span>

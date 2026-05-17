@@ -283,7 +283,7 @@ const HomePage = () => {
                             </p>
                             <div className="flex flex-wrap justify-center items-center gap-md pt-md">
                                 <a 
-                                    href="mailto:pavalep@example.com" 
+                                    href="mailto:pavalep@pavalep.com" 
                                     className="bg-primary text-on-primary px-xxl py-md rounded-xxl font-title-md text-title-md shadow-md hover:brightness-110 active:scale-95 transition-all flex items-center gap-sm"
                                 >
                                     <span className="material-symbols-outlined">mail</span>
