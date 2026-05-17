@@ -275,10 +275,10 @@ const HomePage = () => {
                 <section className="py-giant" id="contact">
                     <div className="bg-primary-container/50 p-huge rounded-xxl text-center space-y-huge relative overflow-hidden border border-primary-container">
                         <div className="relative z-10 space-y-md">
-                            <h2 className="font-display-md text-display-md text-primary leading-tight max-w-3xl mx-auto">
+                            <h2 className="font-display-md text-display-md text-primary leading-tight max-w-4xl mx-auto">
                                 Building mobile products, AI tools, or backend services?
                             </h2>
-                            <p className="font-body-lg text-body-lg text-on-primary-fixed-variant max-w-xl mx-auto font-medium">
+                            <p className="font-body-lg text-body-lg text-on-primary-fixed-variant max-w-3xl mx-auto font-medium">
                                 Let's discuss how we can leverage modern engineering to solve your business complexity.
                             </p>
                             <div className="flex flex-wrap justify-center items-center gap-md pt-md">
