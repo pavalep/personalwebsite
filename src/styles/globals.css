@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@theme {
+  /* Design Tokens from Material Professional Portfolio Redesign */
+  --color-primary: #00443e;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #BFEDE5;
+  --color-on-primary-container: #8ed3ca;
+  --color-secondary: #3f5f90;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #D8E3FF;
+  --color-on-secondary-container: #325383;
+  --color-tertiary: #5f2f00;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #7d4413;
+  --color-on-tertiary-container: #ffb782;
+  
+  --color-background: #fbf9f4;
+  --color-on-background: #1b1c19;
+  
+  --color-surface: #fbf9f4;
+  --color-on-surface: #1b1c19;
+  --color-surface-variant: #e4e2dd;
+  --color-on-surface-variant: #49454F;
+  --color-surface-lowest: #FFFFFF;
+  --color-surface-low: #F5F1EA;
+  --color-surface-high: #E8E4DD;
+  --color-surface-dim: #dbdad5;
+  --color-surface-bright: #fbf9f4;
+  --color-surface-container: #f0eee9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f3ee;
+  --color-surface-container-high: #eae8e3;
+  --color-surface-container-highest: #e4e2dd;
+  
+  --color-outline: #79747E;
+  --color-outline-variant: #bec9c6;
+  --color-error: #BA1A1A;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  
+  --color-primary-fixed: #aaf0e6;
+  --color-primary-fixed-dim: #8ed3ca;
+  --color-on-primary-fixed: #00201d;
+  --color-on-primary-fixed-variant: #00504a;
+  
+  --color-secondary-fixed: #d6e3ff;
+  --color-secondary-fixed-dim: #a8c8ff;
+  --color-on-secondary-fixed: #001b3c;
+  --color-on-secondary-fixed-variant: #254777;
+  
+  --color-tertiary-fixed: #ffdcc5;
+  --color-tertiary-fixed-dim: #ffb782;
+  --color-on-tertiary-fixed: #301400;
+  --color-on-tertiary-fixed-variant: #6e3906;
+  
+  --color-inverse-surface: #302D31;
+  --color-inverse-on-surface: #f2f1ec;
+  --color-inverse-primary: #8ed3ca;
+
+  /* Spacing */
+  --spacing-base: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --spacing-huge: 64px;
+  --spacing-giant: 96px;
+  --spacing-desktop-max-width: 1280px;
+  --spacing-desktop-padding: 40px;
+  --spacing-mobile-padding: 20px;
+
+  /* Radii */
+  --radius-DEFAULT: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-xxl: 20px;
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-body-md: 'Work Sans', sans-serif;
+  --font-title-md: 'Hanken Grotesk', sans-serif;
+  --font-display-md: 'Hanken Grotesk', sans-serif;
+  --font-label-md: 'Hanken Grotesk', sans-serif;
+  --font-title-lg: 'Hanken Grotesk', sans-serif;
+  --font-label-lg: 'Hanken Grotesk', sans-serif;
+  --font-headline-md: 'Hanken Grotesk', sans-serif;
+  --font-body-lg: 'Work Sans', sans-serif;
+  --font-display-lg: 'Hanken Grotesk', sans-serif;
+  --font-headline-lg: 'Hanken Grotesk', sans-serif;
+
+  /* Typography sizes & weights */
+  --text-body-md: 14px;
+  --text-body-md--line-height: 20px;
+  --text-body-md--font-weight: 400;
+
+  --text-title-md: 16px;
+  --text-title-md--line-height: 24px;
+  --text-title-md--font-weight: 700;
+
+  --text-display-md: 45px;
+  --text-display-md--line-height: 52px;
+  --text-display-md--font-weight: 700;
+
+  --text-label-md: 12px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--font-weight: 500;
+
+  --text-title-lg: 22px;
+  --text-title-lg--line-height: 28px;
+  --text-title-lg--font-weight: 700;
+
+  --text-label-lg: 14px;
+  --text-label-lg--line-height: 20px;
+  --text-label-lg--font-weight: 500;
+
+  --text-headline-md: 28px;
+  --text-headline-md--line-height: 36px;
+  --text-headline-md--font-weight: 700;
+
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 24px;
+  --text-body-lg--font-weight: 400;
+
+  --text-display-lg: 57px;
+  --text-display-lg--line-height: 64px;
+  --text-display-lg--font-weight: 700;
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fbf9f4;
+  color: #1b1c19;
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}

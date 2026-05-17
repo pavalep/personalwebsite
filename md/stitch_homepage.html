@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1b1c19",
+                        "error": "#BA1A1A",
+                        "inverse-on-surface": "#f2f1ec",
+                        "surface-bright": "#fbf9f4",
+                        "primary-fixed": "#aaf0e6",
+                        "on-tertiary-container": "#ffb782",
+                        "on-surface-variant": "#49454F",
+                        "inverse-primary": "#8ed3ca",
+                        "on-background": "#1b1c19",
+                        "surface-container": "#f0eee9",
+                        "tertiary-container": "#7d4413",
+                        "on-tertiary-fixed": "#301400",
+                        "outline": "#79747E",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#302D31",
+                        "on-secondary-fixed": "#001b3c",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dbdad5",
+                        "primary-container": "#BFEDE5",
+                        "surface-variant": "#e4e2dd",
+                        "tertiary": "#5f2f00",
+                        "surface-container-low": "#f5f3ee",
+                        "secondary-container": "#D8E3FF",
+                        "primary-fixed-dim": "#8ed3ca",
+                        "surface-tint": "#1f6962",
+                        "surface-lowest": "#FFFFFF",
+                        "on-tertiary-fixed-variant": "#6e3906",
+                        "on-primary-container": "#8ed3ca",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#254777",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#00201d",
+                        "on-secondary-container": "#325383",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb782",
+                        "surface-container-highest": "#e4e2dd",
+                        "surface": "#fbf9f4",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ffdcc5",
+                        "secondary": "#3f5f90",
+                        "background": "#fbf9f4",
+                        "primary": "#00443e",
+                        "surface-low": "#F5F1EA",
+                        "surface-container-high": "#eae8e3",
+                        "secondary-fixed-dim": "#a8c8ff",
+                        "outline-variant": "#bec9c6",
+                        "secondary-fixed": "#d6e3ff",
+                        "on-primary-fixed-variant": "#00504a",
+                        "on-error": "#ffffff",
+                        "surface-high": "#E8E4DD"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "4px",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "xxl": "20px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "giant": "96px",
+                        "xl": "32px",
+                        "base": "4px",
+                        "desktop-padding": "40px",
+                        "mobile-padding": "20px",
+                        "lg": "24px",
+                        "xxl": "48px",
+                        "desktop-max-width": "1280px",
+                        "xs": "8px",
+                        "huge": "64px",
+                        "sm": "12px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Work Sans"],
+                        "title-md": ["Hanken Grotesk"],
+                        "display-md": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "title-lg": ["Hanken Grotesk"],
+                        "label-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Work Sans"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "700"}],
+                        "display-md": ["45px", {"lineHeight": "52px", "fontWeight": "700"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["57px", {"lineHeight": "64px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #fbf9f4; color: #1b1c19; font-family: 'Work Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-center px-mobile-padding md:px-desktop-padding py-4 max-w-desktop-max-width mx-auto bg-surface/80 backdrop-blur-md shadow-sm">
+<nav class="flex items-center justify-between w-full">
+<div class="font-title-lg text-title-lg font-bold text-primary">Paval EP</div>
+<div class="hidden md:flex items-center gap-xl">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-lg text-label-lg" href="#work">Work</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-lg text-label-lg" href="#stack">Stack</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-lg text-label-lg" href="#ai-lab">AI Lab</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-lg text-label-lg" href="#experience">Experience</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-lg text-label-lg" href="#contact">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-lg text-label-lg scale-95 active:scale-90 transition-transform">Email Me</button>
+</nav>
+</header>
+<main class="max-w-desktop-max-width mx-auto px-mobile-padding md:px-desktop-padding pt-huge">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-huge items-center py-giant">
+<div class="space-y-lg">
+<span class="inline-block font-label-lg text-label-lg text-primary bg-primary-container px-md py-xs rounded-full">React Native Developer · Mobile Products · AI Systems</span>
+<h1 class="font-display-lg text-display-lg tracking-tight leading-tight">Building mobile products that survive real-world complexity</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Specialized in high-performance cross-platform applications, integrated AI workflows, and resilient backend systems. Turning complex architectural requirements into seamless user experiences.
+                </p>
+<div class="flex flex-wrap gap-md pt-md">
+<button class="bg-primary text-on-primary px-xxl py-md rounded-xxl font-title-md text-title-md shadow-md hover:bg-on-primary-fixed-variant transition-all">View Work</button>
+<button class="border border-outline text-primary px-xxl py-md rounded-xxl font-title-md text-title-md hover:bg-surface-container transition-all">Contact</button>
+</div>
+</div>
+<div class="relative flex justify-center">
+<!-- Material-style Android Mockup -->
+<div class="w-[280px] h-[580px] bg-on-surface rounded-[40px] p-base shadow-2xl relative border-[8px] border-surface-variant">
+<div class="w-full h-full bg-surface rounded-[32px] overflow-hidden p-md space-y-md">
+<div class="flex justify-between items-center px-xs py-xs">
+<span class="material-symbols-outlined text-on-surface-variant">signal_cellular_4_bar</span>
+<div class="font-label-md text-label-md">12:45</div>
+<span class="material-symbols-outlined text-on-surface-variant">battery_full</span>
+</div>
+<div class="bg-primary-container p-md rounded-xl space-y-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-primary-fixed-variant">System Health</span>
+<span class="material-symbols-outlined text-primary scale-75">check_circle</span>
+</div>
+<div class="font-headline-md text-headline-md">99.9%</div>
+<div class="w-full bg-surface h-1 rounded-full overflow-hidden">
+<div class="bg-primary w-full h-full"></div>
+</div>
+</div>
+<div class="bg-surface-container p-md rounded-xl">
+<div class="font-label-md text-label-md text-on-surface-variant">Payments</div>
+<div class="flex items-center gap-sm mt-xs">
+<div class="w-xs h-xs bg-secondary rounded-full"></div>
+<div class="font-title-md text-title-md">Stripe Integrated</div>
+</div>
+</div>
+<div class="bg-surface-container p-md rounded-xl">
+<div class="font-label-md text-label-md text-on-surface-variant">Auth</div>
+<div class="flex items-center gap-sm mt-xs">
+<div class="w-xs h-xs bg-tertiary rounded-full"></div>
+<div class="font-title-md text-title-md">OAuth 2.0 / JWT</div>
+</div>
+</div>
+<div class="bg-surface-container p-md rounded-xl">
+<div class="font-label-md text-label-md text-on-surface-variant">Maps</div>
+<div class="flex items-center gap-sm mt-xs">
+<div class="w-xs h-xs bg-primary rounded-full"></div>
+<div class="font-title-md text-title-md">Real-time Polylines</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Float Card Backdrop -->
+<div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-lg pb-giant">
+<div class="bg-surface-container p-xl rounded-xxl shadow-sm border border-surface-variant/50">
+<div class="font-headline-lg text-headline-lg text-primary">7+</div>
+<div class="font-title-md text-title-md text-on-surface-variant">Years Experience</div>
+</div>
+<div class="bg-surface-container p-xl rounded-xxl shadow-sm border border-surface-variant/50">
+<div class="font-headline-lg text-headline-lg text-primary">3</div>
+<div class="font-title-md text-title-md text-on-surface-variant">Core Domains</div>
+</div>
+<div class="bg-surface-container p-xl rounded-xxl shadow-sm border border-surface-variant/50">
+<div class="font-headline-lg text-headline-lg text-primary">0-1</div>
+<div class="font-title-md text-title-md text-on-surface-variant">Experience Focus</div>
+</div>
+<div class="bg-surface-container p-xl rounded-xxl shadow-sm border border-surface-variant/50">
+<div class="font-headline-lg text-headline-lg text-primary">RN</div>
+<div class="font-title-md text-title-md text-on-surface-variant">Native Specialist</div>
+</div>
+</section>
+<!-- Selected Work -->
+<section class="py-giant space-y-huge" id="work">
+<div class="flex justify-between items-end">
+<div class="space-y-xs">
+<h2 class="font-headline-lg text-headline-lg">Selected Work</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Engineering solutions for scale and stability.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-xl">
+<!-- Case Study 1 -->
+<article class="bg-surface-container-low rounded-xxl overflow-hidden border border-surface-variant flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 h-[300px] md:h-auto relative bg-surface-container-highest">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A sophisticated digital commerce interface displayed on a high-end smartphone screen. The app features clean typography and a muted color palette of soft greens and neutral greys. The lighting is bright and professional, suggesting a modern workplace environment. Minimalist product photography is visible on the phone screen, emphasizing a high-end retail experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgvE3fv82jl3xbW_gW_SX9CL7vdNXQ9tYk740bswG94G8mcKEBp7_fmYskTvaqA2KTcBbUk30kuNJZP7x-JJVC4v_JNh7OF0Sjjur6tBtjgSEIQi86ZJdw8kUU8aK9nvD98L2E0oIt714FaJMfUykjquXeAvyybnYy_GKAJtgMuj2eMTQL-UDd76Tw4u3OFR3X0kYeBNlukb_VWMTsZZx3Jwhak2BHSGh_WvUN9EkKk64GJ0q2mEU9IkN0toXQwTc8T0ADLHsk3TWF"/>
+</div>
+<div class="md:w-1/2 p-huge flex flex-col justify-center space-y-md">
+<div class="flex gap-xs flex-wrap">
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-lg font-label-md text-label-md">React Native</span>
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-lg font-label-md text-label-md">Payments</span>
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-lg font-label-md text-label-md">Node.js</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Commerce Marketplace</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md border-t border-surface-variant pt-md">
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase">Problem</div>
+<div class="font-body-md text-body-md mt-xs">Scaling inventory updates to 10k users in real-time.</div>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase">Role</div>
+<div class="font-body-md text-body-md mt-xs">Lead Mobile Engineer &amp; Architect.</div>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase">Outcome</div>
+<div class="font-body-md text-body-md mt-xs">99.8% crash-free sessions across OS versions.</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Case Study 2 -->
+<article class="bg-surface-container-low rounded-xxl overflow-hidden border border-surface-variant flex flex-col md:flex-row-reverse h-full">
+<div class="md:w-1/2 h-[300px] md:h-auto relative bg-surface-container-highest">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A clean and modern fintech dashboard UI with abstract data visualization charts in shades of deep teal and light blue. The setting is a minimalist office with soft morning sunlight streaming through a window. The aesthetic is professional, secure, and technologically advanced, using Material Design 3 principles for depth and hierarchy. The image conveys trust and financial clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpjioo_brQNs-GQJ8czGJ-boUZro5WYl4LspDyiSah6KA01nWuj9uG4KW-bzd1Gc53At2lNYcjB9iZrFsHfyHwOsspiX-wgEGuF6WzqFQXfz46E6UXTWHCMNDEjEx_Yk74GJMa5sNYXeKr4_33zbssfyrR2h8zIDCaqyK55FJjl0FWGsLqmLeUVW3tRybr7WuDLWJZM9T79hSQizkG34stx0JnMgmrTqIoZRCiuJV4AVUJkKjMXcvpKL_A0cE7Tln1Ps23nbGa-u22"/>
+</div>
+<div class="md:w-1/2 p-huge flex flex-col justify-center space-y-md">
+<div class="flex gap-xs flex-wrap">
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-lg font-label-md text-label-md">React Native</span>
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-lg font-label-md text-label-md">Fintech</span>
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-lg font-label-md text-label-md">Security</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Fintech App</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md border-t border-surface-variant pt-md">
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase">Problem</div>
+<div class="font-body-md text-body-md mt-xs">Complex state management for multi-currency wallets.</div>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase">Role</div>
+<div class="font-body-md text-body-md mt-xs">Senior Full-stack Developer.</div>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase">Outcome</div>
+<div class="font-body-md text-body-md mt-xs">Reduced transaction latency by 40% globally.</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Case Study 3 -->
+<article class="bg-surface-container-low rounded-xxl overflow-hidden border border-surface-variant flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 h-[300px] md:h-auto relative bg-surface-container-highest">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A healthcare application interface focusing on patient data logs and daily progress charts. The UI is calm and accessible, using soft whites and gentle green accents. The setting is a bright, clinical but warm room with soft focus on a medical professional holding a tablet. The mood is empathetic and methodical, showing how technology can assist in patient care through intuitive design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5LiIfBuv7j_pVxdGdPWRXx49l_NzNFftm3e9W07T8ka5cy3kfImzGuvpd4Eyk7eIMSKz0705wLd0wfoCFcUW3iaTnSf_Hi6Kn9_Vf8Uy8LHd3qNC-F1gxSmmVVu5FRHU57S5QE1DIA32TGxjFOxEI9QqqP2fvdHjAbAt2Bt_G4YurbmLRJ6rBBVurc9H_W5tpiUSCDcuJd2cpPmSWWsNKD5PGVQwiMUiO2WC6-Ue_mGo0TrG6NpqrWfBRp1JYn0JbiEE_wz-7hA7A"/>
+</div>
+<div class="md:w-1/2 p-huge flex flex-col justify-center space-y-md">
+<div class="flex gap-xs flex-wrap">
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-lg font-label-md text-label-md">HealthTech</span>
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-lg font-label-md text-label-md">Offline First</span>
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-lg font-label-md text-label-md">Encryption</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Digital Patient Diary</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md border-t border-surface-variant pt-md">
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase">Problem</div>
+<div class="font-body-md text-body-md mt-xs">Data integrity in remote areas with poor connectivity.</div>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase">Role</div>
+<div class="font-body-md text-body-md mt-xs">Lead Product Developer.</div>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase">Outcome</div>
+<div class="font-body-md text-body-md mt-xs">Successfully synced 100% of encrypted offline data.</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Engineering Stack (Bento Grid Style) -->
+<section class="py-giant" id="stack">
+<h2 class="font-headline-lg text-headline-lg mb-huge">Engineering Stack</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="bg-surface-container-high p-xl rounded-xxl space-y-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">smartphone</span>
+<h4 class="font-title-lg text-title-lg">Mobile Engineering</h4>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">React Native</span>
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">TypeScript</span>
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">Native Modules (JSI)</span>
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">Reanimated 3</span>
+</div>
+</div>
+<div class="bg-surface-container-high p-xl rounded-xxl space-y-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">integration_instructions</span>
+<h4 class="font-title-lg text-title-lg">Product Integrations</h4>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">Stripe</span>
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">Firebase</span>
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">Google Maps API</span>
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">Socket.io</span>
+</div>
+</div>
+<div class="bg-surface-container-high p-xl rounded-xxl space-y-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">terminal</span>
+<h4 class="font-title-lg text-title-lg">AI + Backend Direction</h4>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">Node.js</span>
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">FastAPI</span>
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">PostgreSQL</span>
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">LangChain</span>
+</div>
+</div>
+<div class="bg-surface-container-high p-xl rounded-xxl space-y-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">architecture</span>
+<h4 class="font-title-lg text-title-lg">Foundations</h4>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">CI/CD (Fastlane)</span>
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">Docker</span>
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">Kubernetes</span>
+<span class="bg-surface px-sm py-xs rounded-lg border border-outline-variant font-label-md text-label-md">AWS/GCP</span>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Systems Lab -->
+<section class="py-giant" id="ai-lab">
+<div class="bg-inverse-surface text-inverse-on-surface p-huge rounded-xxl overflow-hidden relative">
+<div class="relative z-10 space-y-xl max-w-2xl">
+<div class="space-y-xs">
+<div class="font-label-lg text-label-lg text-primary-fixed-dim flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-fixed-dim">science</span>
+                            AI Systems Lab
+                        </div>
+<h2 class="font-headline-lg text-headline-lg">Backend &amp; Local AI Workflows</h2>
+<p class="font-body-lg text-body-lg text-surface-variant">Experimenting with localized intelligence to enhance privacy and reduce latency in mobile ecosystems.</p>
+</div>
+<div class="space-y-md">
+<div class="flex items-center justify-between p-md border-b border-outline/30">
+<div class="font-title-md text-title-md">Local LLM Orchestration</div>
+<div class="font-label-md text-label-md text-primary-fixed-dim">Ollama + Docker</div>
+</div>
+<div class="flex items-center justify-between p-md border-b border-outline/30">
+<div class="font-title-md text-title-md">Agentic RAG Workflows</div>
+<div class="font-label-md text-label-md text-primary-fixed-dim">Python + Vector DB</div>
+</div>
+<div class="flex items-center justify-between p-md">
+<div class="font-title-md text-title-md">Real-time Translation Hub</div>
+<div class="font-label-md text-label-md text-primary-fixed-dim">Next.js + WebSockets</div>
+</div>
+</div>
+</div>
+<div class="absolute right-0 bottom-0 top-0 w-1/3 bg-gradient-to-l from-primary/10 to-transparent pointer-events-none hidden md:block"></div>
+</div>
+</section>
+<!-- Experience (Vertical Timeline) -->
+<section class="py-giant" id="experience">
+<h2 class="font-headline-lg text-headline-lg mb-huge">Experience</h2>
+<div class="relative space-y-xl">
+<!-- Timeline Line -->
+<div class="absolute left-4 top-0 bottom-0 w-1 bg-primary-container rounded-full hidden md:block"></div>
+<div class="md:pl-huge relative">
+<div class="hidden md:block absolute left-2 top-2 w-4 h-4 rounded-full bg-primary ring-4 ring-primary-container"></div>
+<div class="bg-surface-container p-xl rounded-xl">
+<div class="flex flex-col md:flex-row md:justify-between items-start mb-sm">
+<div>
+<h4 class="font-title-lg text-title-lg">Senior React Native Developer</h4>
+<div class="font-body-md text-body-md text-primary">Hexims IT Solutions</div>
+</div>
+<div class="font-label-md text-label-md text-on-surface-variant mt-xs md:mt-0">2023 — Present</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Spearheading mobile architectural transitions for major logistics and retail clients, focusing on offline-first capabilities and biometric security layers.</p>
+</div>
+</div>
+<div class="md:pl-huge relative">
+<div class="hidden md:block absolute left-2 top-2 w-4 h-4 rounded-full bg-primary-container"></div>
+<div class="bg-surface-container p-xl rounded-xl">
+<div class="flex flex-col md:flex-row md:justify-between items-start mb-sm">
+<div>
+<h4 class="font-title-lg text-title-lg">Full Stack Developer</h4>
+<div class="font-body-md text-body-md text-primary">Aceware Fintech Services</div>
+</div>
+<div class="font-label-md text-label-md text-on-surface-variant mt-xs md:mt-0">2021 — 2023</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Built highly secure payment interfaces and integrated multi-bank APIs for a regional neobanking platform serving 500k+ users.</p>
+</div>
+</div>
+<div class="md:pl-huge relative">
+<div class="hidden md:block absolute left-2 top-2 w-4 h-4 rounded-full bg-primary-container"></div>
+<div class="bg-surface-container p-xl rounded-xl">
+<div class="flex flex-col md:flex-row md:justify-between items-start mb-sm">
+<div>
+<h4 class="font-title-lg text-title-lg">Mobile Lead</h4>
+<div class="font-body-md text-body-md text-primary">Cankado</div>
+</div>
+<div class="font-label-md text-label-md text-on-surface-variant mt-xs md:mt-0">2019 — 2021</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Developed international oncology support applications with rigorous data compliance (GDPR/HIPAA) and complex patient charting features.</p>
+</div>
+</div>
+<div class="md:pl-huge relative">
+<div class="hidden md:block absolute left-2 top-2 w-4 h-4 rounded-full bg-primary-container"></div>
+<div class="bg-surface-container p-xl rounded-xl">
+<div class="flex flex-col md:flex-row md:justify-between items-start mb-sm">
+<div>
+<h4 class="font-title-lg text-title-lg">Associate Developer</h4>
+<div class="font-body-md text-body-md text-primary">Iband</div>
+</div>
+<div class="font-label-md text-label-md text-on-surface-variant mt-xs md:mt-0">2017 — 2019</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Early career focusing on web-to-mobile porting and hybrid application development using React Native and Flutter.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact / CTA -->
+<section class="py-giant" id="contact">
+<div class="bg-primary-container p-huge rounded-xxl text-center space-y-huge relative overflow-hidden">
+<div class="relative z-10 space-y-md">
+<h2 class="font-display-md text-display-md text-primary">Building mobile products, AI tools, or backend services?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-fixed-variant max-w-2xl mx-auto">Let's discuss how we can leverage modern engineering to solve your business complexity.</p>
+<div class="flex flex-wrap justify-center gap-md pt-md">
+<button class="bg-primary text-on-primary px-xxl py-md rounded-xxl font-title-md text-title-md shadow-md flex items-center gap-sm">
+<span class="material-symbols-outlined">mail</span> Email Me
+                        </button>
+<button class="border border-primary text-primary px-xxl py-md rounded-xxl font-title-md text-title-md hover:bg-white/50 transition-all flex items-center gap-sm">
+<span class="material-symbols-outlined">link</span> LinkedIn
+                        </button>
+<div class="flex items-center gap-sm px-xxl py-md font-title-md text-title-md text-primary">
+<span class="material-symbols-outlined">phone</span> +91 ...-....-..
+                        </div>
+</div>
+</div>
+<!-- Abstract background pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 right-0 w-huge h-huge bg-primary rounded-full -mr-xl -mt-xl"></div>
+<div class="absolute bottom-0 left-0 w-huge h-huge bg-primary rounded-full -ml-xl -mb-xl"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl px-mobile-padding md:px-desktop-padding flex flex-col md:flex-row justify-between items-center gap-md max-w-desktop-max-width mx-auto bg-surface-container-high">
+<div class="font-title-md text-title-md text-on-surface">Paval EP</div>
+<div class="font-body-md text-body-md text-on-surface-variant">© 2026 Paval EP. Built with React Native &amp; Material 3.</div>
+<div class="flex gap-lg">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200 opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200 opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200 opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200 opacity-80 hover:opacity-100" href="#">Resume</a>
+</div>
+</footer>
+</body></html>
